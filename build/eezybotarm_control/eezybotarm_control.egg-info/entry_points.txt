@@ -1,0 +1,3 @@
+[console_scripts]
+arm_controller = eezybotarm_control.arm_controller:main
+
