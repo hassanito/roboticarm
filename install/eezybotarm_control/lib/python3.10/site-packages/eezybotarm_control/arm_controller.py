@@ -37,7 +37,7 @@ class ArmController(Node):
         
         # Initialize joint names and positions
         self.joint_names = ['base_joint', 'shoulder_joint', 'elbow_joint', 'gripper_joint']
-        self.current_positions = [90.0, 90.0, 90.0, 90.0]  # Default positions in degrees
+        self.current_positions = [90.0, 35.0, 160.0, 20.0]  # Default positions in degrees
         
         self.get_logger().info('Arm Controller Node Started')
 
@@ -158,4 +158,8 @@ Usage:
 
 Note: All angles in commands should be in degrees (0-180).
       Joint states are published in radians (ROS2 standard).
+
+#  Test commandsCenter all joints
+ros2 topic pub --once /arm_command std_msgs/msg/Float64MultiArray "{data: [90.0, 90.0, 90.0, 90.0]}"
+
 """

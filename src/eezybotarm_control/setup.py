@@ -1,4 +1,6 @@
 from setuptools import setup
+import os
+from glob import glob
 
 package_name = 'eezybotarm_control'
 
@@ -10,6 +12,8 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        # Add this line to include launch files
+        (os.path.join('share', package_name, 'launch'), glob('launch/*.launch.py'))
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -20,7 +24,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'arm_controller = eezybotarm_control.arm_controller:main'
+            'arm_controller = eezybotarm_control.arm_controller:main',
+            'arm_test_patterns = eezybotarm_control.arm_test_patterns:main'
         ],
     },
 )

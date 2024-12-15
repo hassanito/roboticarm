@@ -1,3 +1,4 @@
 [console_scripts]
 arm_controller = eezybotarm_control.arm_controller:main
+arm_test_patterns = eezybotarm_control.arm_test_patterns:main
 

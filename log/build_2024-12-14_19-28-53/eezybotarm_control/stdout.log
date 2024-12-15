@@ -1,0 +1,32 @@
+running develop
+Removing /home/hassanito/ros2_ws/install/eezybotarm_control/lib/python3.10/site-packages/eezybotarm-control.egg-link (link to .)
+running egg_info
+writing ../../build/eezybotarm_control/eezybotarm_control.egg-info/PKG-INFO
+writing dependency_links to ../../build/eezybotarm_control/eezybotarm_control.egg-info/dependency_links.txt
+writing entry points to ../../build/eezybotarm_control/eezybotarm_control.egg-info/entry_points.txt
+writing requirements to ../../build/eezybotarm_control/eezybotarm_control.egg-info/requires.txt
+writing top-level names to ../../build/eezybotarm_control/eezybotarm_control.egg-info/top_level.txt
+reading manifest file '../../build/eezybotarm_control/eezybotarm_control.egg-info/SOURCES.txt'
+writing manifest file '../../build/eezybotarm_control/eezybotarm_control.egg-info/SOURCES.txt'
+running build
+running build_py
+copying eezybotarm_control/arm_test_patterns.py -> /home/hassanito/ros2_ws/build/eezybotarm_control/build/lib/eezybotarm_control
+running install
+running install_lib
+creating /home/hassanito/ros2_ws/install/eezybotarm_control/lib/python3.10/site-packages/eezybotarm_control
+copying /home/hassanito/ros2_ws/build/eezybotarm_control/build/lib/eezybotarm_control/arm_controller.py -> /home/hassanito/ros2_ws/install/eezybotarm_control/lib/python3.10/site-packages/eezybotarm_control
+copying /home/hassanito/ros2_ws/build/eezybotarm_control/build/lib/eezybotarm_control/__init__.py -> /home/hassanito/ros2_ws/install/eezybotarm_control/lib/python3.10/site-packages/eezybotarm_control
+copying /home/hassanito/ros2_ws/build/eezybotarm_control/build/lib/eezybotarm_control/arm_test_patterns.py -> /home/hassanito/ros2_ws/install/eezybotarm_control/lib/python3.10/site-packages/eezybotarm_control
+byte-compiling /home/hassanito/ros2_ws/install/eezybotarm_control/lib/python3.10/site-packages/eezybotarm_control/arm_controller.py to arm_controller.cpython-310.pyc
+byte-compiling /home/hassanito/ros2_ws/install/eezybotarm_control/lib/python3.10/site-packages/eezybotarm_control/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/hassanito/ros2_ws/install/eezybotarm_control/lib/python3.10/site-packages/eezybotarm_control/arm_test_patterns.py to arm_test_patterns.cpython-310.pyc
+running install_data
+copying resource/eezybotarm_control -> /home/hassanito/ros2_ws/install/eezybotarm_control/share/ament_index/resource_index/packages
+copying package.xml -> /home/hassanito/ros2_ws/install/eezybotarm_control/share/eezybotarm_control
+copying launch/arm_bringup.launch.py -> /home/hassanito/ros2_ws/install/eezybotarm_control/share/eezybotarm_control/launch
+running install_egg_info
+Copying ../../build/eezybotarm_control/eezybotarm_control.egg-info to /home/hassanito/ros2_ws/install/eezybotarm_control/lib/python3.10/site-packages/eezybotarm_control-0.0.1-py3.10.egg-info
+running install_scripts
+Installing arm_controller script to /home/hassanito/ros2_ws/install/eezybotarm_control/lib/eezybotarm_control
+Installing arm_test_patterns script to /home/hassanito/ros2_ws/install/eezybotarm_control/lib/eezybotarm_control
+writing list of installed files to '/home/hassanito/ros2_ws/build/eezybotarm_control/install.log'

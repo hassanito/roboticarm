@@ -10,6 +10,8 @@ setup.py
 ../../build/eezybotarm_control/eezybotarm_control.egg-info/zip-safe
 eezybotarm_control/__init__.py
 eezybotarm_control/arm_controller.py
+eezybotarm_control/arm_test_patterns.py
+launch/arm_bringup.launch.py
 resource/eezybotarm_control
 test/test_copyright.py
 test/test_flake8.py

@@ -1,0 +1,21 @@
+[2.484s] Invoking command in '/home/hassanito/ros2_ws/build/eezybotarm_control': PYTHONPATH=/home/hassanito/ros2_ws/build/eezybotarm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hassanito/ros2_ws/install/eezybotarm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/hassanito/ros2_ws/build/eezybotarm_control/build --no-deps symlink_data --force
+[3.717s] running develop
+[4.455s] running egg_info
+[4.456s] writing eezybotarm_control.egg-info/PKG-INFO
+[4.457s] writing dependency_links to eezybotarm_control.egg-info/dependency_links.txt
+[4.458s] writing entry points to eezybotarm_control.egg-info/entry_points.txt
+[4.459s] writing requirements to eezybotarm_control.egg-info/requires.txt
+[4.459s] writing top-level names to eezybotarm_control.egg-info/top_level.txt
+[4.466s] reading manifest file 'eezybotarm_control.egg-info/SOURCES.txt'
+[4.469s] writing manifest file 'eezybotarm_control.egg-info/SOURCES.txt'
+[4.476s] running build_ext
+[4.477s] Creating /home/hassanito/ros2_ws/install/eezybotarm_control/lib/python3.10/site-packages/eezybotarm-control.egg-link (link to .)
+[4.479s] Installing arm_controller script to /home/hassanito/ros2_ws/install/eezybotarm_control/lib/eezybotarm_control
+[4.479s] Installing arm_test_patterns script to /home/hassanito/ros2_ws/install/eezybotarm_control/lib/eezybotarm_control
+[4.483s] 
+[4.483s] Installed /home/hassanito/ros2_ws/build/eezybotarm_control
+[4.484s] running symlink_data
+[4.484s] symbolically linking /home/hassanito/ros2_ws/build/eezybotarm_control/resource/eezybotarm_control -> /home/hassanito/ros2_ws/install/eezybotarm_control/share/ament_index/resource_index/packages
+[4.484s] symbolically linking /home/hassanito/ros2_ws/build/eezybotarm_control/package.xml -> /home/hassanito/ros2_ws/install/eezybotarm_control/share/eezybotarm_control
+[4.485s] symbolically linking /home/hassanito/ros2_ws/build/eezybotarm_control/launch/arm_bringup.launch.py -> /home/hassanito/ros2_ws/install/eezybotarm_control/share/eezybotarm_control/launch
+[4.641s] Invoked command in '/home/hassanito/ros2_ws/build/eezybotarm_control' returned '0': PYTHONPATH=/home/hassanito/ros2_ws/build/eezybotarm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hassanito/ros2_ws/install/eezybotarm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/hassanito/ros2_ws/build/eezybotarm_control/build --no-deps symlink_data --force
