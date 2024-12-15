@@ -81,12 +81,12 @@ class ArmTestPatterns(Node):
 
     def get_center_positions(self):
         """Get center position for each joint"""
-        return [
-            90.0,  # Base center
-            45.0,  # Shoulder center (mid of 0-70)
-            127.5, # Elbow center (mid of 85-170)
-            60.0   # Gripper center (mid of 20-100)
-        ]
+        center_positions = []
+        for joint_num in range(1, 5):
+            limits = self.joint_limits[joint_num]
+            center = (limits["min"] + limits["max"]) / 2
+            center_positions.append(center)
+        return center_positions
 
     def run_square_pattern(self):
         """Move arm in a square pattern within limits"""
