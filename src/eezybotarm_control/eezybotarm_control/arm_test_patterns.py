@@ -163,11 +163,11 @@ def main(args=None):
         # node.get_logger().info('Running square pattern...')
         # node.run_square_pattern()
         
-        node.get_logger().info('Running pick and place pattern...')
-        node.run_pick_and_place()
+        # node.get_logger().info('Running pick and place pattern...')
+        # node.run_pick_and_place()
         
-        # node.get_logger().info('Running wave pattern...')
-        # node.run_wave()
+        node.get_logger().info('Running wave pattern...')
+        node.run_wave()
         
         # node.get_logger().info('Test patterns completed!')
         

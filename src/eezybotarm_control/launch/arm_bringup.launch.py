@@ -10,7 +10,10 @@ def generate_launch_description():
     pkg_share = get_package_share_directory('eezybotarm_control')
     
     # URDF file path
-    urdf_file = os.path.join(pkg_share, 'description', 'eezybotarm_mk2.urdf')
+    urdf_file = os.path.join(pkg_share, 'description', 'eezybotarm.urdf.xacro')
+    
+    # RViz config path
+    rviz_config = os.path.join(pkg_share, 'config', 'arm.rviz')
     
     # Launch arguments
     update_rate = LaunchConfiguration('update_rate')
@@ -31,7 +34,7 @@ def generate_launch_description():
         name='robot_state_publisher',
         output='screen',
         parameters=[{
-            'robot_description': Command(['cat ', urdf_file]),
+            'robot_description': Command(['xacro ', urdf_file]),
             'publish_frequency': update_rate
         }]
     )
@@ -53,7 +56,7 @@ def generate_launch_description():
         name='arm_controller',
         parameters=[{
             'update_rate': update_rate,
-            'robot_description': Command(['cat ', urdf_file])
+            'robot_description': Command(['xacro ', urdf_file])
         }]
     )
     
@@ -63,6 +66,15 @@ def generate_launch_description():
         executable='arm_test_patterns',
         name='arm_test_patterns'
     )
+    
+    # RViz2 node
+    rviz_node = Node(
+        package='rviz2',
+        executable='rviz2',
+        name='rviz2',
+        arguments=['-d', rviz_config],
+        output='screen'
+    )
 
     return LaunchDescription(
         launch_args + [
@@ -70,5 +82,6 @@ def generate_launch_description():
             joint_state_pub,
             arm_controller,
             test_patterns,
+            rviz_node
         ]
     )

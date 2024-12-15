@@ -12,8 +12,8 @@ class ArmTestPatterns(Node):
         # Define joint limits
         self.joint_limits = {
             1: {"min": 0, "max": 180, "name": "Base Rotation"},
-            2: {"min": 0, "max": 70, "name": "Shoulder"},
-            3: {"min": 85, "max": 170, "name": "Elbow"},
+            2: {"min": 20, "max": 70, "name": "Shoulder"},
+            3: {"min": 95, "max": 170, "name": "Elbow"},
             4: {"min": 20, "max": 100, "name": "Gripper"}
         }
         
@@ -81,12 +81,12 @@ class ArmTestPatterns(Node):
 
     def get_center_positions(self):
         """Get center position for each joint"""
-        center_positions = []
-        for joint_num in range(1, 5):
-            limits = self.joint_limits[joint_num]
-            center = (limits["min"] + limits["max"]) / 2
-            center_positions.append(center)
-        return center_positions
+        return [
+            90.0,  # Base center
+            45.0,  # Shoulder center (mid of 0-70)
+            127.5, # Elbow center (mid of 85-170)
+            60.0   # Gripper center (mid of 20-100)
+        ]
 
     def run_square_pattern(self):
         """Move arm in a square pattern within limits"""
@@ -163,11 +163,11 @@ def main(args=None):
         # node.get_logger().info('Running square pattern...')
         # node.run_square_pattern()
         
-        node.get_logger().info('Running pick and place pattern...')
-        node.run_pick_and_place()
+        # node.get_logger().info('Running pick and place pattern...')
+        # node.run_pick_and_place()
         
-        # node.get_logger().info('Running wave pattern...')
-        # node.run_wave()
+        node.get_logger().info('Running wave pattern...')
+        node.run_wave()
         
         # node.get_logger().info('Test patterns completed!')
         

@@ -1,0 +1,53 @@
+[2.591s] Invoking command in '/home/hassanito/ros2_ws/src/eezybotarm_control': PYTHONPATH=/home/hassanito/ros2_ws/build/eezybotarm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hassanito/ros2_ws/install/eezybotarm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/eezybotarm_control build --build-base /home/hassanito/ros2_ws/build/eezybotarm_control/build install --record /home/hassanito/ros2_ws/build/eezybotarm_control/install.log --single-version-externally-managed install_data
+[3.600s] running egg_info
+[3.603s] creating ../../build/eezybotarm_control/eezybotarm_control.egg-info
+[3.603s] writing ../../build/eezybotarm_control/eezybotarm_control.egg-info/PKG-INFO
+[3.604s] writing dependency_links to ../../build/eezybotarm_control/eezybotarm_control.egg-info/dependency_links.txt
+[3.605s] writing entry points to ../../build/eezybotarm_control/eezybotarm_control.egg-info/entry_points.txt
+[3.606s] writing requirements to ../../build/eezybotarm_control/eezybotarm_control.egg-info/requires.txt
+[3.606s] writing top-level names to ../../build/eezybotarm_control/eezybotarm_control.egg-info/top_level.txt
+[3.607s] writing manifest file '../../build/eezybotarm_control/eezybotarm_control.egg-info/SOURCES.txt'
+[3.612s] reading manifest file '../../build/eezybotarm_control/eezybotarm_control.egg-info/SOURCES.txt'
+[3.615s] writing manifest file '../../build/eezybotarm_control/eezybotarm_control.egg-info/SOURCES.txt'
+[3.616s] running build
+[3.617s] running build_py
+[3.618s] creating /home/hassanito/ros2_ws/build/eezybotarm_control/build
+[3.619s] creating /home/hassanito/ros2_ws/build/eezybotarm_control/build/lib
+[3.619s] creating /home/hassanito/ros2_ws/build/eezybotarm_control/build/lib/eezybotarm_control
+[3.620s] copying eezybotarm_control/arm_controller.py -> /home/hassanito/ros2_ws/build/eezybotarm_control/build/lib/eezybotarm_control
+[3.621s] copying eezybotarm_control/__init__.py -> /home/hassanito/ros2_ws/build/eezybotarm_control/build/lib/eezybotarm_control
+[3.621s] copying eezybotarm_control/arm_test_patterns.py -> /home/hassanito/ros2_ws/build/eezybotarm_control/build/lib/eezybotarm_control
+[3.622s] running install
+[3.622s] running install_lib
+[3.623s] creating /home/hassanito/ros2_ws/install/eezybotarm_control/lib/python3.10/site-packages/eezybotarm_control
+[3.624s] copying /home/hassanito/ros2_ws/build/eezybotarm_control/build/lib/eezybotarm_control/arm_controller.py -> /home/hassanito/ros2_ws/install/eezybotarm_control/lib/python3.10/site-packages/eezybotarm_control
+[3.624s] copying /home/hassanito/ros2_ws/build/eezybotarm_control/build/lib/eezybotarm_control/__init__.py -> /home/hassanito/ros2_ws/install/eezybotarm_control/lib/python3.10/site-packages/eezybotarm_control
+[3.625s] copying /home/hassanito/ros2_ws/build/eezybotarm_control/build/lib/eezybotarm_control/arm_test_patterns.py -> /home/hassanito/ros2_ws/install/eezybotarm_control/lib/python3.10/site-packages/eezybotarm_control
+[3.625s] byte-compiling /home/hassanito/ros2_ws/install/eezybotarm_control/lib/python3.10/site-packages/eezybotarm_control/arm_controller.py to arm_controller.cpython-310.pyc
+[3.629s] byte-compiling /home/hassanito/ros2_ws/install/eezybotarm_control/lib/python3.10/site-packages/eezybotarm_control/__init__.py to __init__.cpython-310.pyc
+[3.629s] byte-compiling /home/hassanito/ros2_ws/install/eezybotarm_control/lib/python3.10/site-packages/eezybotarm_control/arm_test_patterns.py to arm_test_patterns.cpython-310.pyc
+[3.634s] running install_data
+[3.635s] creating /home/hassanito/ros2_ws/install/eezybotarm_control/share/ament_index
+[3.636s] creating /home/hassanito/ros2_ws/install/eezybotarm_control/share/ament_index/resource_index
+[3.637s] creating /home/hassanito/ros2_ws/install/eezybotarm_control/share/ament_index/resource_index/packages
+[3.638s] copying resource/eezybotarm_control -> /home/hassanito/ros2_ws/install/eezybotarm_control/share/ament_index/resource_index/packages
+[3.638s] copying package.xml -> /home/hassanito/ros2_ws/install/eezybotarm_control/share/eezybotarm_control
+[3.639s] creating /home/hassanito/ros2_ws/install/eezybotarm_control/share/eezybotarm_control/launch
+[3.639s] copying launch/arm_bringup.launch.py -> /home/hassanito/ros2_ws/install/eezybotarm_control/share/eezybotarm_control/launch
+[3.640s] creating /home/hassanito/ros2_ws/install/eezybotarm_control/share/eezybotarm_control/description
+[3.640s] copying description/eezybotarm.urdf.xacro -> /home/hassanito/ros2_ws/install/eezybotarm_control/share/eezybotarm_control/description
+[3.641s] creating /home/hassanito/ros2_ws/install/eezybotarm_control/share/eezybotarm_control/meshes
+[3.641s] creating /home/hassanito/ros2_ws/install/eezybotarm_control/share/eezybotarm_control/meshes/ebamk2
+[3.642s] copying meshes/ebamk2/link_3.STL -> /home/hassanito/ros2_ws/install/eezybotarm_control/share/eezybotarm_control/meshes/ebamk2
+[3.642s] copying meshes/ebamk2/link_1.STL -> /home/hassanito/ros2_ws/install/eezybotarm_control/share/eezybotarm_control/meshes/ebamk2
+[3.643s] copying meshes/ebamk2/base_link.STL -> /home/hassanito/ros2_ws/install/eezybotarm_control/share/eezybotarm_control/meshes/ebamk2
+[3.644s] copying meshes/ebamk2/link_2.STL -> /home/hassanito/ros2_ws/install/eezybotarm_control/share/eezybotarm_control/meshes/ebamk2
+[3.644s] creating /home/hassanito/ros2_ws/install/eezybotarm_control/share/eezybotarm_control/config
+[3.645s] copying config/arm.rviz -> /home/hassanito/ros2_ws/install/eezybotarm_control/share/eezybotarm_control/config
+[3.645s] running install_egg_info
+[3.650s] Copying ../../build/eezybotarm_control/eezybotarm_control.egg-info to /home/hassanito/ros2_ws/install/eezybotarm_control/lib/python3.10/site-packages/eezybotarm_control-0.0.1-py3.10.egg-info
+[3.654s] running install_scripts
+[3.726s] Installing arm_controller script to /home/hassanito/ros2_ws/install/eezybotarm_control/lib/eezybotarm_control
+[3.727s] Installing arm_test_patterns script to /home/hassanito/ros2_ws/install/eezybotarm_control/lib/eezybotarm_control
+[3.728s] writing list of installed files to '/home/hassanito/ros2_ws/build/eezybotarm_control/install.log'
+[3.831s] Invoked command in '/home/hassanito/ros2_ws/src/eezybotarm_control' returned '0': PYTHONPATH=/home/hassanito/ros2_ws/build/eezybotarm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hassanito/ros2_ws/install/eezybotarm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/eezybotarm_control build --build-base /home/hassanito/ros2_ws/build/eezybotarm_control/build install --record /home/hassanito/ros2_ws/build/eezybotarm_control/install.log --single-version-externally-managed install_data

@@ -1,6 +1,6 @@
 from setuptools import setup
-from glob import glob
 import os
+from glob import glob
 
 package_name = 'eezybotarm_control'
 
@@ -15,17 +15,20 @@ setup(
         # Launch files
         (os.path.join('share', package_name, 'launch'),
          glob(os.path.join('launch', '*launch.[pxy][yma]*'))),
-        # URDF files
+        # URDF/Xacro files
         (os.path.join('share', package_name, 'description'),
-         glob(os.path.join('description', '*.urdf'))),
+         glob(os.path.join('description', '*.urdf.xacro'))),
         # Mesh files
         (os.path.join('share', package_name, 'meshes', 'ebamk2'),
          glob(os.path.join('meshes', 'ebamk2', '*.STL'))),
+        # RViz config
+        (os.path.join('share', package_name, 'config'),
+         glob(os.path.join('config', '*.rviz'))),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='your_name',
-    maintainer_email='your_email@example.com',
+    maintainer_email='your.email@example.com',
     description='EEZYbotARM MK2 ROS2 Control Package',
     license='TODO: License declaration',
     tests_require=['pytest'],
