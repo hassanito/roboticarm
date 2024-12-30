@@ -35,7 +35,6 @@
         <child link="link_1"/>
         <axis xyz="0 0 -1"/>
         <limit effort="100" velocity="1.0" lower="-0.7854" upper="0.7854"/>
-        <!-- [-45,45] degrees -->
     </joint>
 
     <!-- LINK 1 -->
@@ -61,9 +60,7 @@
         <parent link="link_1"/>
         <child link="link_2"/>
         <axis xyz="0 0 -1"/>
-        <!-- <limit effort="100" velocity="1.0" lower="-1.01229" upper="0.279253"/> -->
         <limit effort="100" velocity="1.0" lower="-0.279253" upper="1.01229"/>
-        <!-- [-35,55] degrees -->
     </joint>
 
     <!-- LINK 2 -->
@@ -83,14 +80,33 @@
         </collision>
     </link>
 
-    <!-- JOINT 3 (Elbow) -->
+    <!-- Intermediate Joint for Independent Movement (sharing rotation center with joint_2) -->
     <joint name="joint_3" type="revolute">
         <origin xyz="-0.021 0.133 -0.0105" rpy="0 0 0"/>
         <parent link="link_2"/>
+        <child link="link_2_5"/>
+        <axis xyz="0 0 -1"/>
+        <limit effort="100" velocity="1.0" lower="0" upper="1.22173"/>
+    </joint>
+
+    <!-- Intermediate Link -->
+    <link name="link_2_5">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.001"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <!-- JOINT 3 (Elbow) -->
+    <joint name="joint_2_5" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="link_2_5"/>
         <child link="link_3"/>
         <axis xyz="0 0 -1"/>
         <limit effort="100" velocity="1.0" lower="0" upper="1.22173"/>
-        <!-- [-70,20] degrees -->
+        <mimic joint="joint_2" multiplier="-1.0" offset="0"/>
     </joint>
 
     <!-- LINK 3 -->
