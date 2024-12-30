@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="eezybotarm_mk2">
+    <!-- Materials -->
+    <material name="green">
+        <color rgba="0 0.275 0 1"/>
+    </material>
+    <material name="blue">
+        <color rgba="0 0 1 1"/>
+    </material>
+    <material name="red">
+        <color rgba="1 0 0 1"/>
+    </material><!-- BASE LINK -->
+<link name="base_link">
+    <visual>
+        <origin xyz="0 0 0.025" rpy="0 0 0"/>
+        <geometry>
+            <cylinder radius="0.05" length="0.05"/>
+        </geometry>
+        <material name="green"/>
+    </visual>
+    <collision>
+        <origin xyz="0 0 0.025" rpy="0 0 0"/>
+        <geometry>
+            <cylinder radius="0.05" length="0.05"/>
+        </geometry>
+    </collision>
+</link>
+
+<!-- JOINT 1 (Base rotation) -->
+<joint name="joint_1" type="revolute">
+    <origin xyz="0 0 0.05" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="link_1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" velocity="1.0" lower="-0.7854" upper="0.7854"/>
+    <!-- [-45,45] degrees -->
+</joint>
+
+<!-- LINK 1 (First arm segment) -->
+<link name="link_1">
+    <visual>
+        <origin xyz="0 0 0.0175" rpy="0 0 0"/>
+        <geometry>
+            <box size="0.03 0.08 0.035"/>
+        </geometry>
+        <material name="green"/>  
+    </visual>
+    <collision>
+        <origin xyz="0 0 0.0175" rpy="0 0 0"/>
+        <geometry>
+            <box size="0.03 0.08 0.035"/>
+        </geometry>
+    </collision>
+</link>
+
+<!-- JOINT 2 (Shoulder) -->
+<joint name="joint_2" type="revolute">
+    <origin xyz="0 -0.005 0.035" rpy="1.578 0 0"/>
+    <parent link="link_1"/>
+    <child link="link_2"/>
+    <axis xyz="0 0 -1"/>
+    <limit effort="100" velocity="1.0" lower="-0.279253" upper="1.01229"/>
+    <!-- [-35,55] degrees -->
+</joint>
+
+<!-- LINK 2 (Second arm segment) -->
+<link name="link_2">
+    <visual>
+        <origin xyz="0 0.0665 0" rpy="0 0 0"/>
+        <geometry>
+            <box size="0.03 0.133 0.02"/>
+        </geometry>
+        <material name="blue"/>
+    </visual>
+    <collision>
+        <origin xyz="0 0.0665 0" rpy="0 0 0"/>
+        <geometry>
+            <box size="0.03 0.133 0.02"/>
+        </geometry>
+    </collision>
+</link>
+
+<!-- JOINT 3 (Elbow) -->
+<joint name="joint_3" type="revolute">
+    <origin xyz="-0.021 0.133 -0.0105" rpy="0 0 1.5708"/>
+    <parent link="link_2"/>
+    <child link="link_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" velocity="1.0" lower="0" upper="1.22173"/>
+    <!-- [-70,20] degrees -->
+</joint>
+
+<!-- LINK 3 (End effector) -->
+<link name="link_3">
+    <visual>
+        <origin xyz="0 0.05 0" rpy="0 0 0"/>
+        <geometry>
+            <box size="0.02 0.1 0.02"/>
+        </geometry>
+        <material name="red"/>
+    </visual>
+    <collision>
+        <origin xyz="0 0.05 0" rpy="0 0 0"/>
+        <geometry>
+            <box size="0.02 0.1 0.02"/>
+        </geometry>
+    </collision>
+</link>
+
+<!-- Add transmission elements for ros2_control -->
+<transmission name="joint_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_1">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_1_motor">
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name="joint_2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_2">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_2_motor">
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name="joint_3_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_3">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_3_motor">
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+</robot>

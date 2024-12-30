@@ -60,12 +60,12 @@ def generate_launch_description():
         }]
     )
     
-    # Test patterns node
-    test_patterns = Node(
-        package='eezybotarm_control',
-        executable='arm_test_patterns',
-        name='arm_test_patterns'
-    )
+    # # Test patterns node
+    # test_patterns = Node(
+    #     package='eezybotarm_control',
+    #     executable='arm_test_patterns',
+    #     name='arm_test_patterns'
+    # )
     
     # RViz2 node
     rviz_node = Node(
@@ -81,7 +81,7 @@ def generate_launch_description():
             robot_state_pub,
             joint_state_pub,
             arm_controller,
-            test_patterns,
+            # test_patterns,
             rviz_node
         ]
     )

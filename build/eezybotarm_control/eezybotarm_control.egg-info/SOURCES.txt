@@ -10,6 +10,7 @@ setup.py
 ../../build/eezybotarm_control/eezybotarm_control.egg-info/zip-safe
 config/arm.rviz
 description/eezybotarm.urdf.xacro
+description/eezyrobotarm_simple.urdf.xacro
 eezybotarm_control/__init__.py
 eezybotarm_control/arm_controller.py
 eezybotarm_control/arm_test_patterns.py
