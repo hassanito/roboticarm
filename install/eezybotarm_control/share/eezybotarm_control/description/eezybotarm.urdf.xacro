@@ -28,13 +28,14 @@
         </collision>
     </link>
 
-    <!-- JOINT 1 -->
+    <!-- JOINT 1 (Base rotation) -->
     <joint name="joint_1" type="revolute">
         <origin xyz="0 0 0.05" rpy="0 0 0"/>
         <parent link="base_link"/>
         <child link="link_1"/>
-        <axis xyz="0 0 1"/>
+        <axis xyz="0 0 -1"/>
         <limit effort="100" velocity="1.0" lower="-0.7854" upper="0.7854"/>
+        <!-- [-45,45] degrees -->
     </joint>
 
     <!-- LINK 1 -->
@@ -54,12 +55,13 @@
         </collision>
     </link>
 
-    <!-- JOINT 2 -->
+    <!-- JOINT 2 (Shoulder) -->
     <joint name="joint_2" type="revolute">
         <origin xyz="0 -0.005 0.035" rpy="1.578 0 0"/>
         <parent link="link_1"/>
         <child link="link_2"/>
-        <axis xyz="0 0 1"/>
+        <axis xyz="0 0 -1"/>
+        <!-- <limit effort="100" velocity="1.0" lower="-1.01229" upper="0.279253"/> -->
         <limit effort="100" velocity="1.0" lower="-0.279253" upper="1.01229"/>
         <!-- [-35,55] degrees -->
     </joint>
@@ -81,12 +83,12 @@
         </collision>
     </link>
 
-    <!-- JOINT 3 -->
+    <!-- JOINT 3 (Elbow) -->
     <joint name="joint_3" type="revolute">
         <origin xyz="-0.021 0.133 -0.0105" rpy="0 0 0"/>
         <parent link="link_2"/>
         <child link="link_3"/>
-        <axis xyz="0 0 1"/>
+        <axis xyz="0 0 -1"/>
         <limit effort="100" velocity="1.0" lower="0" upper="1.22173"/>
         <!-- [-70,20] degrees -->
     </joint>
@@ -107,35 +109,4 @@
             </geometry>
         </collision>
     </link>
-
-    <!-- Add transmission elements for ros2_control -->
-    <transmission name="joint_1_trans">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="joint_1">
-            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="joint_1_motor">
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-
-    <transmission name="joint_2_trans">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="joint_2">
-            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="joint_2_motor">
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-
-    <transmission name="joint_3_trans">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="joint_3">
-            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="joint_3_motor">
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
 </robot>

@@ -1,0 +1,23 @@
+[2.687s] Invoking command in '/home/hassanito/roboticarm/src/eezybotarm_control': PYTHONPATH=/home/hassanito/roboticarm/build/eezybotarm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hassanito/roboticarm/install/eezybotarm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/eezybotarm_control build --build-base /home/hassanito/roboticarm/build/eezybotarm_control/build install --record /home/hassanito/roboticarm/build/eezybotarm_control/install.log --single-version-externally-managed install_data
+[3.707s] running egg_info
+[3.708s] writing ../../build/eezybotarm_control/eezybotarm_control.egg-info/PKG-INFO
+[3.710s] writing dependency_links to ../../build/eezybotarm_control/eezybotarm_control.egg-info/dependency_links.txt
+[3.711s] writing entry points to ../../build/eezybotarm_control/eezybotarm_control.egg-info/entry_points.txt
+[3.712s] writing requirements to ../../build/eezybotarm_control/eezybotarm_control.egg-info/requires.txt
+[3.712s] writing top-level names to ../../build/eezybotarm_control/eezybotarm_control.egg-info/top_level.txt
+[3.718s] reading manifest file '../../build/eezybotarm_control/eezybotarm_control.egg-info/SOURCES.txt'
+[3.722s] writing manifest file '../../build/eezybotarm_control/eezybotarm_control.egg-info/SOURCES.txt'
+[3.723s] running build
+[3.723s] running build_py
+[3.724s] running install
+[3.725s] running install_lib
+[3.730s] running install_data
+[3.732s] copying description/eezybotarm.urdf.xacro -> /home/hassanito/roboticarm/install/eezybotarm_control/share/eezybotarm_control/description
+[3.732s] running install_egg_info
+[3.738s] removing '/home/hassanito/roboticarm/install/eezybotarm_control/lib/python3.10/site-packages/eezybotarm_control-0.0.1-py3.10.egg-info' (and everything under it)
+[3.739s] Copying ../../build/eezybotarm_control/eezybotarm_control.egg-info to /home/hassanito/roboticarm/install/eezybotarm_control/lib/python3.10/site-packages/eezybotarm_control-0.0.1-py3.10.egg-info
+[3.744s] running install_scripts
+[3.818s] Installing arm_controller script to /home/hassanito/roboticarm/install/eezybotarm_control/lib/eezybotarm_control
+[3.819s] Installing arm_test_patterns script to /home/hassanito/roboticarm/install/eezybotarm_control/lib/eezybotarm_control
+[3.820s] writing list of installed files to '/home/hassanito/roboticarm/build/eezybotarm_control/install.log'
+[3.924s] Invoked command in '/home/hassanito/roboticarm/src/eezybotarm_control' returned '0': PYTHONPATH=/home/hassanito/roboticarm/build/eezybotarm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hassanito/roboticarm/install/eezybotarm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/eezybotarm_control build --build-base /home/hassanito/roboticarm/build/eezybotarm_control/build install --record /home/hassanito/roboticarm/build/eezybotarm_control/install.log --single-version-externally-managed install_data
